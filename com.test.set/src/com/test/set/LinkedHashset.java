@@ -6,22 +6,23 @@ import java.util.LinkedHashSet;
 public class LinkedHashset {
 	public static void main(String[] args) {
 		LinkedHashset set= new LinkedHashset();
-		Book b1=new Book(1,"Java","ABC");
+		Employee b1=new Employee(1,"ABC","Salem");
 		set.add(b1);
-		for(Book sub:set) {
-			System.out.println("ID:"+ sub.id+" "+"Name:"+ sub.name+" "+"Publisher:"+ sub.publisher+" ");
+		
+		for(Employee sub : set) {
+			System.out.println("ID:"+ sub.id+" "+"Name:"+ sub.name+" "+"Place:"+ sub.place+" ");
 			
 			}
 		}
 	}
-	class Book{
+	class Employee{
 		int id;
-		String name,publisher;
-		public Book(int id, String name, String publisher)
+		String name,place;
+		public Employee(int id, String name, String place)
 		{
 			super();
 			this.id=id;
 			this.name=name;
-			this.publisher=publisher;
+			this.place=place;
 		}
 	}
